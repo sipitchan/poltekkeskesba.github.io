@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Politeknik Kesehatan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+
+</head>
+<body>
+    <!-- Header Top Bar -->
+    <div class="bg-success text-white py-2">
+        <div class="container header-nav">
+            <div class="left">
+                <span><i class="fas fa-envelope me-2"></i>poltekkeskesumabangsa@gmail.com</span>
+                <span><i class="fas fa-phone me-2"></i>0822-8238-2963 / 0811-7232-284</span>
+            </div>
+            <div class="right">
+                <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-white me-3"><i class="fab fa-youtube"></i></a>
+                <a href="#" class="text-white"><i class="fas fa-globe"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="assets/img/logo.png" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">HOME</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="prodiDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            TENTANG
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu1" aria-labelledby="prodiDropdown">
+                            <li><a class="dropdown-item" href="#">Sambutan Direktur</a></li>
+                            <li><a class="dropdown-item" href="#">Sejarah</a></li>
+                            <li><a class="dropdown-item" href="#">Visi & Misi</a></li>
+                            <li><a class="dropdown-item" href="#">Struktur Organisasi</a></li>
+                            <li><a class="dropdown-item" href="#">Cendikia</a></li>
+                            <li><a class="dropdown-item" href="#">Fasilitas & Keunggulan</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="prodiDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            PRODI
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu1" aria-labelledby="prodiDropdown">
+                            <li><a class="dropdown-item" href="#">Teknologi Laboratorium Medik</a></li>
+                            <li><a class="dropdown-item" href="#">Manajemen Informasi Kesehatan</a></li>
+                            <li><a class="dropdown-item" href="#">Farmasi</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="prodiDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            INFORMASI
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu1" aria-labelledby="prodiDropdown">
+                            <li><a class="dropdown-item" href="#">Berita Terbaru</a></li>
+                            <li><a class="dropdown-item" href="#">Pengumuman</a></li>
+                            <li><a class="dropdown-item" href="#">Kegiatan</a></li>
+                            <li><a class="dropdown-item" href="#">Unduh Berkas</a></li>
+                        </ul>
+                    </li>
+                    
+                    
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">PENDAFTARAN PMB</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="prodiDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            LINK INTERNAL
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu1" aria-labelledby="prodiDropdown">
+                            <li><a class="dropdown-item" href="#">Jurnal</a></li>
+                            <li><a class="dropdown-item" href="#">e-Library</a></li>
+                            <li><a class="dropdown-item" href="#">Portal Lecturer</a></li>
+                            <li><a class="dropdown-item" href="#">Portal Student</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">CONTACT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javacript:void(0);">
+                            <i class="fas fa-search"></i> <!-- Ikon pencarian dari FontAwesome -->
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner Section -->
+    <div class="banner text-white text-start d-flex align-items-start" style="background-image: url('assets/img/bg.png'); height: 95vh; background-size: cover; background-position: center;">
+        <div class="overlay"></div> <!-- Bayangan untuk meningkatkan kontras teks -->
+        <div class="container">
+            <div class="row justify-content-start">
+                <div class="col-lg-9"> <!-- Membatasi lebar konten menjadi 9 kolom -->
+                    <h1 class="fw-bold">Politeknik Kesehatan Kesuma Bangsa mempunyai 3 Prodi.</h1>
+                    <p class="fs-5">DIV Teknologi Laboratorium Medik, DIV Manajemen Informasi Kesehatan, DIII Farmasi.</p>
+                    <a href="#" class="btn btn-purpel mt-3">Daftar PMB 2024/2025</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- informasi selengkapnya section -->
+    <div class="container informasi-selengkapnya bg-purpel">
+        <div class="row">
+            <div class="col-lg-4 d-flex justify-content-center align-items-center">
+                <h2>Baca Informasi Selengkapnya...</h2>
+                
+            </div>            
+            <div class="col-lg-8">
+                <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="carousel-baris" id="carouselItems">
+                                <!-- Item 1 -->
+                                <div class="carousel-item-content bg-soft-green">
+                                    <img src="https://poltekkeskesba.com/wp-content/uploads/2019/08/open-book.png" alt="" class="me-3">
+                                    <h4>Farmasi</h4>
+                                </div>
+                                <!-- Item 2 -->
+                                <div class="carousel-item-content bg-orange">
+                                    <img src="https://poltekkeskesba.com/wp-content/uploads/2019/08/open-book.png" alt="" class="me-3">
+                                    <h4>Manajemen Informasi Kesehatan</h4>
+                                </div>
+                                <!-- Item 3 -->
+                                <div class="carousel-item-content bg-blue">
+                                    <img src="https://poltekkeskesba.com/wp-content/uploads/2019/08/open-book.png" alt="" class="me-3">
+                                    <h4>Teknologi Laboratorium Medik</h4>
+                                </div>
+                                <!-- Item 4 -->
+                                <div class="carousel-item-content bg-green">
+                                    <img src="https://poltekkeskesba.com/wp-content/uploads/2019/08/open-book.png" alt="" class="me-3">
+                                    <h4>Berita</h4>
+                                </div>
+                                <!-- Item 5 -->
+                                <div class="carousel-item-content bg-red">
+                                    <img src="https://poltekkeskesba.com/wp-content/uploads/2019/08/open-book.png" alt="" class="me-3">
+                                    <h4>Pengumuman</h4>
+                                </div>
+                                <!-- Item 6 -->
+                                <div class="carousel-item-content bg-orange">
+                                    <img src="https://poltekkeskesba.com/wp-content/uploads/2019/08/open-book.png" alt="" class="me-3">
+                                    <h4>Penerimaan Siswa Baru</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <button class="carousel-control-prev" type="button" id="prevButton">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" id="nextButton">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+      
+  
+    
+
+    <!-- About & Program studi Section -->
+    <div class="container about-prodi">
+        <div class="row">
+            <!-- About Us Section -->
+            <div class="col-lg-6">
+                <div class="about">
+                    <h6>About Us</h6>
+                    <h2>Politeknik Kesehatan Kesuma Bangsa</h2>
+                    <p>
+                        Politeknik Kesehatan Kesuma Bangsa merupakan perguruan tinggi swasta yang berdiri berdasarkan 
+                        Surat Keputusan Menteri Pendidikan dan Kebudayaan No : 979/M/2020 yang berlokasi di Bandar Lampung 
+                        di bawah naungan Yayasan Kesuma Bangsa Gedong Air Bandar Lampung.
+                    </p>
+                    <p>
+                        Politeknik Kesehatan Kesuma Bangsa melihat dirinya sebagai pusat pembentukan kreativitas intelektual, 
+                        pengembangan ilmu teknologi dan profesionalitas dibidang kesehatan yang bercita- cita untuk meningkatkan 
+                        keterampilan dan bermoral di bidang pendidikan vokasi sehingga dapat berperan serta dalam upaya untuk 
+                        turut mencerdaskan kehidupan berbangsa dan bernegara, damai, adil, dan makmur dalam naungan Negara 
+                        Kesatuan Republik Indonesia.
+                    </p>
+                    <a href="#" class="btn btn-purpel mt-3">Baca Selengkapnya...</a>
+                </div>
+            </div>
+
+            <!-- Program Studi Section -->
+            <div class="col-lg-6">
+                <div class="program-studi bg-purpel">
+                    <h2>Program Studi</h2>
+                    <div class="list-studi d-flex align-items-center">
+                        <img src="https://poltekkeskesba.com/wp-content/uploads/2019/08/open-book.png" alt="" class="me-3" style="width: 50px; height: 50px;">
+                        <div>
+                            <h3>DIV Teknologi Laboratorium Medik (Analis Kesehatan)</h3>
+                            <p>
+                                Menghasilkan Sarjana Terapan Teknologi Laboratorium Medik Yang Unggul Dalam 
+                                Bidang Biologi Molekuler, Berkarakter Dan Profesional.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="list-studi d-flex align-items-center">
+                        <img src="https://poltekkeskesba.com/wp-content/uploads/2019/08/open-book.png" alt="" class="me-3" style="width: 50px; height: 50px;">
+                        <div>
+                            <h3>DIV Teknologi Laboratorium Medik (Analis Kesehatan)</h3>
+                            <p>
+                                Menghasilkan Sarjana Terapan Teknologi Laboratorium Medik Yang Unggul Dalam 
+                                Bidang Biologi Molekuler, Berkarakter Dan Profesional.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="list-studi d-flex align-items-center">
+                        <img src="https://poltekkeskesba.com/wp-content/uploads/2019/08/open-book.png" alt="" class="me-3" style="width: 50px; height: 50px;">
+                        <div>
+                            <h3>DIV Teknologi Laboratorium Medik (Analis Kesehatan)</h3>
+                            <p>
+                                Menghasilkan Sarjana Terapan Teknologi Laboratorium Medik Yang Unggul Dalam 
+                                Bidang Biologi Molekuler, Berkarakter Dan Profesional.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- News -->
+    <div class="container poltekkeskesba-informasi-news mt-4">
+        <div class="col-12">
+            <h3>Berita Kampus</h3>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="poltekkeskesba-informasi-new-content">
+                        <img src="https://poltekkeskesba.com/wp-content/uploads/2024/11/Polinela-Kunjungan-Politeknik-Kesuma-Bangsa-2.jpg" alt="">
+                        <div class="container">
+                            <div class="news-meta">
+                                <span class="date"><i class="fa fa-calendar"></i> <a href="#">12 Januari 2025</a></span>
+                                <span class="author"><i class="fa fa-user"></i> <a href="#">Penulis: John Doe</a></span>
+                            </div>
+                            <a href="#" class="title">Judul Berita</a>
+                            <p>Isi berita yang panjang dan akan dibatasi sampai 2 baris agar tidak terlalu panjang. Ini adalah contoh isi berita yang lebih panjang.</p>
+                        </div>
+                    </div>
+                </div> 
+                <div class="col-lg-4 col-md-6">
+                    <div class="poltekkeskesba-informasi-new-content">
+                        <img src="https://poltekkeskesba.com/wp-content/uploads/2024/11/Polinela-Kunjungan-Politeknik-Kesuma-Bangsa-2.jpg" alt="">
+                        <div class="container">
+                            <div class="news-meta">
+                                <span class="date"><i class="fa fa-calendar"></i> <a href="#">12 Januari 2025</a></span>
+                                <span class="author"><i class="fa fa-user"></i> <a href="#">Penulis: John Doe</a></span>
+                            </div>
+                            <a href="#" class="title">Judul Berita</a>
+                            <p>Isi berita yang panjang dan akan dibatasi sampai 2 baris agar tidak terlalu panjang. Ini adalah contoh isi berita yang lebih panjang.</p>
+                        </div>
+                    </div>
+                </div> 
+                <div class="col-lg-4 col-md-6">
+                    <div class="poltekkeskesba-informasi-new-content">
+                        <img src="https://poltekkeskesba.com/wp-content/uploads/2024/11/Polinela-Kunjungan-Politeknik-Kesuma-Bangsa-2.jpg" alt="">
+                        <div class="container">
+                            <div class="news-meta">
+                                <span class="date"><i class="fa fa-calendar"></i> <a href="#">12 Januari 2025</a></span>
+                                <span class="author"><i class="fa fa-user"></i> <a href="#">Penulis: John Doe</a></span>
+                            </div>
+                            <a href="#" class="title">Judul Berita</a>
+                            <p>Isi berita yang panjang dan akan dibatasi sampai 2 baris agar tidak terlalu panjang. Ini adalah contoh isi berita yang lebih panjang.</p>
+                        </div>
+                    </div>
+                </div> 
+                <div class="col-lg-4 col-md-6">
+                    <div class="poltekkeskesba-informasi-new-content">
+                        <img src="https://poltekkeskesba.com/wp-content/uploads/2024/11/Polinela-Kunjungan-Politeknik-Kesuma-Bangsa-2.jpg" alt="">
+                        <div class="container">
+                            <div class="news-meta">
+                                <span class="date"><i class="fa fa-calendar"></i> <a href="#">12 Januari 2025</a></span>
+                                <span class="author"><i class="fa fa-user"></i> <a href="#">Penulis: John Doe</a></span>
+                            </div>
+                            <a href="#" class="title">Judul Berita</a>
+                            <p>Isi berita yang panjang dan akan dibatasi sampai 2 baris agar tidak terlalu panjang. Ini adalah contoh isi berita yang lebih panjang.</p>
+                        </div>
+                    </div>
+                </div> 
+                <div class="col-lg-4 col-md-6">
+                    <div class="poltekkeskesba-informasi-new-content">
+                        <img src="https://poltekkeskesba.com/wp-content/uploads/2024/11/Polinela-Kunjungan-Politeknik-Kesuma-Bangsa-2.jpg" alt="">
+                        <div class="container">
+                            <div class="news-meta">
+                                <span class="date"><i class="fa fa-calendar"></i> <a href="#">12 Januari 2025</a></span>
+                                <span class="author"><i class="fa fa-user"></i> <a href="#">Penulis: John Doe</a></span>
+                            </div>
+                            <a href="#" class="title">Judul Berita</a>
+                            <p>Isi berita yang panjang dan akan dibatasi sampai 2 baris agar tidak terlalu panjang. Ini adalah contoh isi berita yang lebih panjang.</p>
+                        </div>
+                    </div>
+                </div> 
+                <div class="col-lg-4 col-md-6">
+                    <div class="poltekkeskesba-informasi-new-content">
+                        <img src="https://poltekkeskesba.com/wp-content/uploads/2024/11/Polinela-Kunjungan-Politeknik-Kesuma-Bangsa-2.jpg" alt="">
+                        <div class="container">
+                            <div class="news-meta">
+                                <span class="date"><i class="fa fa-calendar"></i> <a href="#">12 Januari 2025</a></span>
+                                <span class="author"><i class="fa fa-user"></i> <a href="#">Penulis: John Doe</a></span>
+                            </div>
+                            <a href="#" class="title">Judul Berita</a>
+                            <p>Isi berita yang panjang dan akan dibatasi sampai 2 baris agar tidak terlalu panjang. Ini adalah contoh isi berita yang lebih panjang.</p>
+                        </div>
+                    </div>
+                </div> 
+            </div>                
+        </div>
+    </div>
+
+
+    <div class="testimonial-container mb-4" style="
+        background: linear-gradient(to right, rgba(131, 9, 231, 0.7), rgba(156, 74, 255, 0.7)), 
+        url('https://png.pngtree.com/thumb_back/fh260/background/20230512/pngtree-hands-writing-a-piece-of-paper-image_2499902.jpg') no-repeat center center;
+        background-size: cover;
+        background-attachment: fixed;
+    ">
+        <div class="container">
+            <div class="title">
+                <h5>Testimonials</h5>
+                <h1>What Students Say</h1>
+            </div>
+
+        </div>
+        
+        
+        <div class="owl-carousel owl-theme mt-5">
+            <div class="owl-item">
+                <div class="card">
+                    <div class="img-card">
+                        <img src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                            alt="">
+                    </div>
+                    <div class="testimonial mt-4 mb-2">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus expedita dicta doloremque odit
+                        saepe quo natus aut accusantium alias blanditiis.
+                    </div>
+                    <div class="name bg-green">
+                        <span>Denis Richie</span>
+                        <p>Mahasiswa</p>
+                    </div>
+                </div>
+            </div>
+            <div class="owl-item">
+                <div class="card">
+                    <div class="img-card">
+                        <img src="https://images.pexels.com/photos/1024311/pexels-photo-1024311.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+                            alt="">
+                    </div>
+                    <div class="testimonial mt-4 mb-2">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus expedita dicta doloremque odit
+                        saepe quo natus aut accusantium alias blanditiis.
+                    </div>
+                    <div class="name bg-green">
+                        <span>Lisa Sthalekar</span>
+                        <p>Mahasiswa</p>
+                    </div>
+                </div>
+            </div>
+            <div class="owl-item">
+                <div class="card">
+                    <div class="img-card">
+                        <img src="https://images.pexels.com/photos/1036622/pexels-photo-1036622.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                            alt="">
+                    </div>
+                    <div class="testimonial mt-4 mb-2">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus expedita dicta doloremque odit
+                        saepe quo natus aut accusantium alias blanditiis.
+                    </div>
+                    <div class="name bg-green">
+                        <span>Elizabith Richie</span>
+                        <p>Mahasiswa</p>
+                    </div>
+                </div>
+            </div>
+            <div class="owl-item">
+                <div class="card">
+                    <div class="img-card">
+                        <img src="https://images.pexels.com/photos/1212984/pexels-photo-1212984.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                            alt="">
+                    </div>
+                    <div class="testimonial mt-4 mb-2">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus expedita dicta doloremque odit
+                        saepe quo natus aut accusantium alias blanditiis.
+                    </div>
+                    <div class="name bg-green">
+                        <span>Daniel Xavier</span>
+                        <p>Mahasiswa</p>
+                    </div>
+                </div>
+            </div>
+            <div class="owl-item">
+                <div class="card">
+                    <div class="img-card">
+                        <img src="https://images.pexels.com/photos/1832959/pexels-photo-1832959.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                            alt="">
+                    </div>
+                    <div class="testimonial mt-4 mb-2">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus expedita dicta doloremque odit
+                        saepe quo natus aut accusantium alias blanditiis.
+                    </div>
+                    <div class="name bg-green">
+                        <span>Emma Watson</span>
+                        <p>Mahasiswa</p>
+                    </div>
+                </div>
+            </div>
+            <div class="owl-item">
+                <div class="card">
+                    <div class="img-card">
+                        <img src="https://images.pexels.com/photos/718261/pexels-photo-718261.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                            alt="">
+                    </div>
+                    <div class="testimonial mt-4 mb-2">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus expedita dicta doloremque odit
+                        saepe quo natus aut accusantium alias blanditiis.
+                    </div>
+                    <div class="name bg-green">
+                        <span>Mohammad Imran</span>
+                        <p>Mahasiswa</p>
+                    </div>
+                </div>
+            </div>
+            <div class="owl-item">
+                <div class="card">
+                    <div class="img-card">
+                        <img src="https://images.pexels.com/photos/718261/pexels-photo-718261.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                            alt="">
+                    </div>
+                    <div class="testimonial mt-4 mb-2">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus expedita dicta doloremque odit
+                        saepe quo natus aut accusantium alias blanditiis.
+                    </div>
+                    <div class="name bg-green">
+                        <span>Mahesa</span>
+                        <p>Mahasiswa</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mb-4">
+        <div class="galery">
+            <h1>Gallery</h1>
+            <div class="galeri-row">
+                <div class="galeri-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-slide="0">
+                    <img src="https://poltekkeskesba.com/wp-content/uploads/2022/12/DIV-MIK-Rekam-Medik.png">
+                </div>
+                <div class="galeri-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-slide="1">
+                    <img src="https://poltekkeskesba.com/wp-content/uploads/2022/12/4M9A7020.MP4-23-Dec-22-11_10_54-AM-768x432.png">
+                </div>
+                <div class="galeri-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-slide="2">
+                    <img src="https://poltekkeskesba.com/wp-content/uploads/2022/12/DIII-Farmasi.png">
+                </div>
+                <div class="galeri-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-slide="3">
+                    <img src="https://poltekkeskesba.com/wp-content/uploads/2022/12/4M9A6718.MP4-23-Dec-22-11_07_42-AM.png">
+                </div>
+                <div class="galeri-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-slide="4">
+                    <img src="https://poltekkeskesba.com/wp-content/uploads/2022/12/4M9A6754.MP4-23-Dec-22-11_08_12-AM-1.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal untuk Full-Screen Image Slider -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- Tombol Close di Pojok Kanan -->
+                    <span class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="fa fa-close"></i></span>
+                    <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><span class="date"><i class="fa fa-close"></i></span></button> -->
+                </div>
+                <div class="modal-body">
+                    <div class="gallery-info">
+                        <!-- Jumlah Slide di Pojok Kiri -->
+                        <span class="gallery-count">
+
+                        </span>
+                    </div>
+                    <div class="gallery-slider owl-carousel owl-theme">
+                        <div class="item">
+                            <img src="https://poltekkeskesba.com/wp-content/uploads/2022/12/DIV-MIK-Rekam-Medik.png">
+                        </div>
+                        <div class="item">
+                            <img src="https://poltekkeskesba.com/wp-content/uploads/2022/12/4M9A7020.MP4-23-Dec-22-11_10_54-AM-768x432.png">
+                        </div>
+                        <div class="item">
+                            <img src="https://poltekkeskesba.com/wp-content/uploads/2022/12/DIII-Farmasi.png">
+                        </div>
+                        <div class="item">
+                            <img src="https://poltekkeskesba.com/wp-content/uploads/2022/12/4M9A6718.MP4-23-Dec-22-11_07_42-AM.png">
+                        </div>
+                        <div class="item">
+                            <img src="https://poltekkeskesba.com/wp-content/uploads/2022/12/4M9A6754.MP4-23-Dec-22-11_08_12-AM-1.png">
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+  
+
+    <script>
+      $(document).ready(function() {
+            var owl = $('.gallery-slider');
+            
+            // Inisialisasi Owl Carousel
+            owl.owlCarousel({
+                items: 1,
+                // loop: true,   // Mengaktifkan loop
+                nav: true,
+                dots: false
+            });
+
+            // Hitung jumlah total gambar di gallery
+            var totalSlides = owl.find('.item').length;
+            $('.gallery-count').text("1 / " + totalSlides);  // Set awal
+
+            // Update jumlah slide saat carousel berubah
+            owl.on('changed.owl.carousel', function(event) {
+                // Mengambil indeks item saat ini
+                var currentIndex = event.item.index;
+                
+                // Mengatasi masalah loop: Modulus untuk memastikan indeks berada dalam rentang yang benar
+                if (currentIndex >= totalSlides) {
+                    currentIndex = currentIndex - totalSlides;  // Menyesuaikan jika indeks sudah melewati total
+                }
+                
+                // Menambah 1 karena indeks mulai dari 0
+                var displayIndex = currentIndex + 1;
+
+                // Update jumlah slide yang ditampilkan
+                $('.gallery-count').text(displayIndex + " / " + totalSlides);
+                
+                console.log("Current Slide: " + displayIndex + " / " + totalSlides);
+            });
+
+            // Menangani pengaturan modal dan slider
+            $('#imageModal').on('shown.bs.modal', function(event) {
+                // Memastikan slider mulai pada gambar pertama saat modal dibuka
+                owl.trigger('to.owl.carousel', [0, 0]);
+            });
+        });
+
+
+
+    </script>
+
+
+
+    <div class="container slide-mitra h-100 mb-4 mt-4" style="background: url(https://poltekkeskesba.com/wp-content/uploads/2019/05/course-shape.png);">
+        <div class="row align-items-center h-100">
+            <div class="container rounded">
+                <h1 class="text-center mb-4 txt-color-purpel">Mitra Kampus</h1>
+                <div class="slider">
+                    <div class="logos">
+                        <a href="#"><img class="image" src="https://poltekkeskesba.com/wp-content/uploads/2022/12/LOGO-MITRA-PRAMITRA-300x300.png" alt=""></a>
+                        <a href="#"><img class="image" src="https://poltekkeskesba.com/wp-content/uploads/2022/12/LOGO-MITRA-NATURONAL-300x300.png" alt=""></a>
+                        <a href="#"><img class="image" src="https://poltekkeskesba.com/wp-content/uploads/2022/12/LOGO-MITRA-KIMIA-FARMA-300x158.png" alt=""></a>
+                        <a href="#"><img class="image" src="https://poltekkeskesba.com/wp-content/uploads/2022/12/LOGO-PORMIKI-300x285.png" alt=""></a>
+                        <a href="#"><img class="image" src="https://poltekkeskesba.com/wp-content/uploads/2022/12/KOTA-METRO-300x300.png" alt=""></a>
+                        <a href="#"><img class="image" src="https://poltekkeskesba.com/wp-content/uploads/2022/12/LOGO-BANDAR-LAMPUNG-300x300.png" alt=""></a>
+                        <a href="#"><img class="image" src="https://poltekkeskesba.com/wp-content/uploads/2022/12/LOGO-LAMPUNG-SANG-BUMI-RUWA-JURAI-300x300.png" alt=""></a>
+                        <a href="#"><img class="image" src="https://poltekkeskesba.com/wp-content/uploads/2022/12/LOGO-PATELKI-300x300.png" alt=""></a>
+                    </div>
+                    <div class="logos">
+                        <a href="#"><img class="image" src="https://poltekkeskesba.com/wp-content/uploads/2022/12/LOGO-MITRA-PRAMITRA-300x300.png" alt=""></a>
+                        <a href="#"><img class="image" src="https://poltekkeskesba.com/wp-content/uploads/2022/12/LOGO-MITRA-NATURONAL-300x300.png" alt=""></a>
+                        <a href="#"><img class="image" src="https://poltekkeskesba.com/wp-content/uploads/2022/12/LOGO-MITRA-KIMIA-FARMA-300x158.png" alt=""></a>
+                        <a href="#"><img class="image" src="https://poltekkeskesba.com/wp-content/uploads/2022/12/LOGO-PORMIKI-300x285.png" alt=""></a>
+                        <a href="#"><img class="image" src="https://poltekkeskesba.com/wp-content/uploads/2022/12/KOTA-METRO-300x300.png" alt=""></a>
+                        <a href="#"><img class="image" src="https://poltekkeskesba.com/wp-content/uploads/2022/12/LOGO-BANDAR-LAMPUNG-300x300.png" alt=""></a>
+                        <a href="#"><img class="image" src="https://poltekkeskesba.com/wp-content/uploads/2022/12/LOGO-LAMPUNG-SANG-BUMI-RUWA-JURAI-300x300.png" alt=""></a>
+                        <a href="#"><img class="image" src="https://poltekkeskesba.com/wp-content/uploads/2022/12/LOGO-PATELKI-300x300.png" alt=""></a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container poltekkeskesba-maps mb-4">
+        <iframe loading="lazy" 
+                src="https://maps.google.com/maps?q=politeknik%20kesehatan%20kesuma%20bangsa&amp;t=m&amp;z=12&amp;output=embed&amp;iwloc=near" 
+                title="politeknik kesehatan kesuma bangsa" 
+                aria-label="politeknik kesehatan kesuma bangsa">
+        </iframe>
+    </div>
+
+
+
+
+    <!-- Footer -->
+    <footer class="footer p-4">
+        <div class="container footer-row">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <img src="https://poltekkeskesba.com/wp-content/uploads/2022/12/FOOTER-NEW-POLTEKKES-KUSUMA-BANGSA-300x50.png" alt="" class="footer-img">
+                    <p class="mb-2 fw-bold footer-deskripsi">Politeknik Kesehatan Kesuma Bangsa merupakan perguruan tinggi swasta yang berlokasi di Bandar Lampung di bawah naungan Yayasan Kesuma Bangsa Gedong Air Bandar Lampung.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+    
+                <div class="col-lg-4">
+                    <div class="row">
+                        <div class="col-lg-6 mb-4">
+                            <h5 class="footer-heading">Statistics</h5>
+                            <div class="card statistik bg-green2">
+                                <div class="card-body text-center text-white d-flex flex-column justify-content-center align-items-center">
+                                    <h5 class="mb-2"><strong>TOTAL PENGUNJUNG</strong></h5>
+                                    <h1 class="fw-bold mb-2">5052</h1>
+                                    <p>Pengunjung Hari Ini</p> <p>12</p>
+                                    <p>Pengunjung Online</p> <p>23</p>
+                                </div>
+                            </div>   
+                        </div>
+            
+                        <div class="col-lg-6 mb-4">
+                            <h5 class="footer-heading">Link Internal</h5>
+                            <ul class="footer-list">
+                                <li><a href="#">Jurnal</a></li>
+                                <li><a href="#">e-Library</a></li>
+                                <li><a href="#">Portal Lecturer</a></li>
+                                <li><a href="#">Portal Student</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                   
+    
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="footer-heading">Contact Us</h5>
+                    <p>Jl. Imam Bonjol No.3, Gedong Air, Kec. Tj. Karang Bar., Kota Bandar Lampung, Lampung 35151</p>
+                    <ul class="footer-contact-list">
+                        <li><i class="fas fa-phone"></i> 0822-8238-2963</li>
+                        <li><i class="fas fa-envelope"></i> poltekkeskesumabangsa@gmail.com</li>
+                        <li><i class="fa fa-globe"></i>www.poltekkeskesba.ac.id</li>
+                    </ul>
+                </div>
+                
+            </div>
+
+        </div>
+        
+    </footer>
+    <!-- Copyright Section -->
+    <div class="text-center fw-bold bg-green2 py-3">
+        <p class="mb-0">Copyright &copy; 2024 Politeknik Kesehatan Kesuma Bangsa. All rights reserved.</p>
+    </div>
+
+    
+    
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/carouselcustom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
+
+</body>
+</html>
