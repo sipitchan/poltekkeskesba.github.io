@@ -137,11 +137,13 @@ p {
     color: #07294D !important;
     font-size: 1rem;
     font-weight: 500;
+    padding-left: 20px !important;
 }
 
 /* Efek Hover untuk nav-link */
 .navbar-nav .nav-link:hover {
     color: #8309E7 !important; /* Warna ungu pada hover */
+    
 }
 
 /* Memberikan jarak antara icon pencarian dan elemen lainnya */
@@ -151,79 +153,74 @@ p {
     color: #8309E7 
 }
 
-
-/* Dropdown menu */
-.nav-item.dropdown:hover .dropdown-menu {
-    display: block; /* Menampilkan dropdown saat hover */
+/* Posisi dropdown menu utama */
+/* Styling untuk dropdown menu utama */
+.nav-item.dropdown:hover > .dropdown-menu {
+    display: block; /* Menampilkan dropdown utama saat hover */
 }
 
-/* Styling untuk dropdown-menu */
-.dropdown-menu {
-    display: none; /* Menyembunyikan dropdown secara default */
-    background-color: #fff; /* Warna latar belakang dropdown */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Memberikan bayangan pada dropdown */
-    border-radius: 5px; /* Membulatkan tepi dropdown */
-    border-top: 3px solid #8309E7; /* Menambahkan border di atas dropdown dengan warna #8309E7 */
-    border-left: none; /* Menghapus border kiri */
-    border-right: none; /* Menghapus border kanan */
-    border-bottom: none; /* Menghapus border bawah */
-    overflow: visible; /* Agar elemen dapat keluar dari dropdown (seperti strip) */
-    min-width: 250px; /* Menentukan lebar maksimal untuk dropdown */
-    max-width: 300px; /* Menentukan lebar maksimal untuk dropdown */
-    white-space: normal; /* Agar teks dapat terbungkus jika diperlukan */
-    word-wrap: break-word; /* Mengatur agar kata panjang dapat terputus dan dibungkus */
-    overflow-y: auto; /* Menambahkan scrollbar jika dropdown lebih tinggi dari max-height */
-    width: auto; /* Pastikan lebar menyesuaikan isi dan batas maksimal */
-}
-
-/* Menghapus border pada setiap item dropdown */
+/* Styling untuk item dropdown */
 .dropdown-menu .dropdown-item {
-    color: #07294D; /* Warna teks item dropdown */
+    color: #07294D;
     font-size: 1rem;
     font-weight: 500;
-    border: none; /* Menghapus border pada item */
-    position: relative; /* Untuk penempatan animasi strip */
-    padding-left: 20px; /* Memberikan ruang agar strip muncul di kiri tulisan */
-    padding-right: 10px; /* Memberikan ruang agar strip muncul di kiri tulisan */
-    transition: box-shadow 0.3s ease, border-radius 0.3s ease; /* Menambahkan transisi untuk efek timbul dan strip */
-    white-space: normal; /* Mengatur teks agar terbungkus jika panjang */
-    word-wrap: break-word; /* Memecah kata-kata panjang */
+    padding-left: 20px;
+    padding-right: 10px;
+    transition: box-shadow 0.3s ease, border-radius 0.3s ease;
 }
 
-/* Efek hover untuk dropdown item */
+/* Hover effect untuk item dropdown */
 .dropdown-menu .dropdown-item:hover {
-    background-color: #f8f9fa; /* Memberikan warna latar belakang saat hover */
-    color: #8309E7 !important; /* Warna teks berubah saat hover pada item dropdown */
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* Efek timbul dengan bayangan */
-    border-radius: 10px; /* Menambahkan radius di sisi kanan saat hover */
+    background-color: #f8f9fa;
+    color: #8309E7;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
-/* Menambahkan animasi strip di samping tulisan saat hover */
-.dropdown-menu .dropdown-item:hover::before {
-    content: "-"; /* Menambahkan strip (-) di sebelah kiri teks */
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%); /* Menjaga strip di tengah */
-    font-size: 30px; /* Memperbesar ukuran strip */
-    font-weight: 600; /* Membuat strip lebih tegas */
-    color: #8309E7; /* Warna strip */
-    opacity: 1;
-    transition: opacity 0.3s ease; /* Menambahkan transisi untuk munculnya strip */
+/* Sub-dropdown yang muncul di sebelah kanan */
+.nav-item.dropdown .dropdown-menu .nav-item.dropdown .dropdown-menu {
+    display: none; /* Menyembunyikan sub-dropdown secara default */
+    position: absolute; /* Memposisikan sub-dropdown di luar konten utama */
+    left: 98%; /* Posisikan sub-dropdown di sebelah kanan dropdown induk */
+    top: 0; /* Menjaga sub-dropdown sejajar dengan item induk */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan pada sub-dropdown */
+    border-radius: 5px;
 }
 
-
-/* Efek timbul saat hover */
-.dropdown-menu .dropdown-item {
-    opacity: 1; /* Teks akan selalu terlihat */
+/* Menampilkan sub-dropdown saat hover pada item induk (Link 2) */
+.nav-item.dropdown:hover .dropdown-menu .nav-item.dropdown:hover .dropdown-menu {
+    display: block; /* Menampilkan sub-dropdown saat hover pada Link 2 */
 }
 
-/* Efek timbul dengan bayangan */
-.dropdown-menu .dropdown-item:hover {
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Efek bayangan saat hover */
-    border-radius: 10px; /* Menambahkan radius agar sisi dropdown melengkung */
-    transform: none; /* Tidak ada pergeseran pada teks */
+/* Pastikan dropdown tetap terlihat dengan z-index */
+.nav-item.dropdown:hover .dropdown-menu {
+    z-index: 1051; /* Agar dropdown utama tetap di atas konten lainnya */
 }
+
+/* Untuk mobile, pastikan sub-dropdown tetap muncul di atas item induk jika diperlukan */
+@media (max-width: 995px) {
+    .navbar-collapse {
+        max-height: 80vh;  /* Membatasi tinggi navbar */
+        overflow-y: auto;  /* Mengaktifkan scroll jika konten lebih banyak dari tinggi navbar */
+    }
+    .navbar-nav .nav-link {
+        padding-left: 15px !important;
+    }
+    .nav-item.dropdown .dropdown-menu {
+        position: static;
+    }
+
+    .nav-item.dropdown .dropdown-menu .dropdown-item {
+        padding-left: 15px;
+    }
+
+    /* Sub-dropdown di mobile harus tetap di bawah dropdown induk */
+    .nav-item.dropdown .dropdown-menu .nav-item.dropdown .dropdown-menu {
+        position: static; /* Agar sub-dropdown muncul di bawah */
+        left: 0; /* Tidak menggeser ke kanan */
+    }
+}
+
 
 
 
