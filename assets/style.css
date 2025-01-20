@@ -320,8 +320,8 @@ p {
 /* informasi Selengkapnya */
 .informasi-selengkapnya {
     position: relative;
-    z-index: 10; /* Pastikan angka lebih tinggi dari elemen lain jika ada tumpang tindih */
-    margin-top: -140px; /* Mengatur jarak vertikal untuk memindahkan elemen ke atas */
+    z-index: 10;
+    margin-top: -140px;
     padding: 20px;
     border-radius: 10px;
 }
@@ -331,13 +331,13 @@ p {
 
 .carousel-inner {
     display: flex;
-    overflow: hidden; /* Menyembunyikan item yang tidak terlihat */
-    width: 100%; /* Membuat carousel-inner mengambil 100% lebar container */
+    overflow: hidden;
+    width: 100%;
 }
 
 #carouselItems {
     display: flex;
-    transition: transform 0.7s ease; /* Transisi mulus */
+    transition: transform 0.7s ease;
     padding: 25px;
 }
 
@@ -348,8 +348,9 @@ p {
     margin: 5px;
     height: 200px;
     aspect-ratio: 1 / 1;
-    flex: 0 0 33.333%; /* Menampilkan 3 item per slide */
+    flex: 0 0 33.333%; /* Default: 3 items on desktop */
 }
+
 .carousel-item-content img {
     width: 70px;
     height: 70px;
@@ -1073,6 +1074,51 @@ p {
 
 .footer .footer-list li a:hover {
     text-decoration: underline;
+}
+
+
+
+
+
+/* icon help */
+
+.floating-whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50px;
+    padding: 10px 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.floating-whatsapp:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.floating-whatsapp i {
+    font-size: 24px;
+    margin-right: 10px;
+}
+@media (max-width: 576px) {
+
+    .floating-whatsapp {
+        padding: 6px 10px;
+        font-size: 9px;
+        bottom: 28px;
+        right: 8px;
+    }
+
+    .floating-whatsapp i {
+        font-size: 20px;
+        margin-right: 8px;
+    }
 }
 
 

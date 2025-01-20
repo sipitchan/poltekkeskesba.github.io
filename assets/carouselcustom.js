@@ -1,77 +1,111 @@
-let currentIndex = 0;  // Indeks saat ini untuk item yang sedang terlihat
-const itemsPerPage = 3; // Menampilkan 3 item per slide
+// let currentIndex = 0;  // Indeks saat ini untuk item yang sedang terlihat
+// const itemsPerPage = 3; // Menampilkan 3 item per slide
+// const items = document.querySelectorAll("#carouselItems .carousel-item-content");
+// const totalItems = items.length;
+
+// // Fungsi untuk menyesuaikan jarak geser berdasarkan ukuran layar
+// const getMoveDistance = () => {
+//     const viewportWidth = window.innerWidth; // Lebar layar
+
+//     // Menentukan jarak geser berdasarkan ukuran layar
+//     if (viewportWidth <= 768) { // Layar tablet
+//         let moveDistance = 240; // Default untuk pergerakan setelah yang ke-3
+//         if (firstMove) {
+//             moveDistance = 250; // Geser 290px pertama kali
+//         } else if (secondMove) {
+//             moveDistance = 242; // Geser 283px untuk pergerakan kedua
+//         }
+//         return moveDistance; // Geser default di desktop
+//     } else { // Layar desktop
+//         let moveDistance = 277; // Default untuk pergerakan setelah yang ke-3
+//         if (firstMove) {
+//             moveDistance = 290; // Geser 290px pertama kali
+//         } else if (secondMove) {
+//             moveDistance = 283; // Geser 283px untuk pergerakan kedua
+//         }
+//         return moveDistance; // Geser default di desktop
+//     }
+// }
+
+// // Fungsi untuk menyesuaikan transformasi posisi carousel
+// const updateCarousel = () => {
+//     const moveDistance = getMoveDistance(); // Menyesuaikan pergeseran berdasarkan ukuran layar
+//     const translateXValue = currentIndex * moveDistance;
+//     document.querySelector("#carouselItems").style.transform = `translateX(-${translateXValue}px)`;
+
+//     // Mengatur status pergerakan pertama dan kedua
+//     if (firstMove) firstMove = false;
+//     else if (secondMove) secondMove = false;
+// };
+
+// // Variabel untuk melacak apakah pergerakan pertama dan kedua telah terjadi
+// let firstMove = true; // Geseran pertama
+// let secondMove = false; // Geseran kedua
+
+// // Fungsi untuk pindah ke item berikutnya (Next)
+// const nextSlide = () => {
+//     currentIndex++;
+//     if (currentIndex + itemsPerPage > totalItems) {
+//         currentIndex = 0; // Jika mencapai akhir, kembali ke awal
+//     }
+//     if (firstMove) {
+//         secondMove = true; // Menandai pergerakan kedua setelah pertama
+//     }
+//     updateCarousel();
+// };
+
+// // Fungsi untuk pindah ke item sebelumnya (Previous)
+// const prevSlide = () => {
+//     currentIndex--;
+//     if (currentIndex < 0) {
+//         currentIndex = totalItems - itemsPerPage; // Jika sudah di awal, kembali ke akhir
+//     }
+//     if (firstMove) {
+//         secondMove = true; // Menandai pergerakan kedua setelah pertama
+//     }
+//     updateCarousel();
+// };
+
+// // Event listeners untuk tombol prev dan next
+// document.getElementById("nextButton").addEventListener("click", nextSlide);
+// document.getElementById("prevButton").addEventListener("click", prevSlide);
+
+// // Event listener untuk resize window agar jarak geser disesuaikan saat ukuran layar berubah
+// window.addEventListener("resize", updateCarousel);
+
+
+let currentIndex = 0;
 const items = document.querySelectorAll("#carouselItems .carousel-item-content");
 const totalItems = items.length;
 
-// Fungsi untuk menyesuaikan jarak geser berdasarkan ukuran layar
-const getMoveDistance = () => {
-    const viewportWidth = window.innerWidth; // Lebar layar
-
-    // Menentukan jarak geser berdasarkan ukuran layar
-    if (viewportWidth <= 768) { // Layar tablet
-        let moveDistance = 240; // Default untuk pergerakan setelah yang ke-3
-        if (firstMove) {
-            moveDistance = 250; // Geser 290px pertama kali
-        } else if (secondMove) {
-            moveDistance = 242; // Geser 283px untuk pergerakan kedua
-        }
-        return moveDistance; // Geser default di desktop
-    } else { // Layar desktop
-        let moveDistance = 277; // Default untuk pergerakan setelah yang ke-3
-        if (firstMove) {
-            moveDistance = 290; // Geser 290px pertama kali
-        } else if (secondMove) {
-            moveDistance = 283; // Geser 283px untuk pergerakan kedua
-        }
-        return moveDistance; // Geser default di desktop
-    }
-}
-
-// Fungsi untuk menyesuaikan transformasi posisi carousel
+// Function to update the carousel position
 const updateCarousel = () => {
-    const moveDistance = getMoveDistance(); // Menyesuaikan pergeseran berdasarkan ukuran layar
+    const moveDistance = items[0].offsetWidth + 10;
     const translateXValue = currentIndex * moveDistance;
     document.querySelector("#carouselItems").style.transform = `translateX(-${translateXValue}px)`;
+}
 
-    // Mengatur status pergerakan pertama dan kedua
-    if (firstMove) firstMove = false;
-    else if (secondMove) secondMove = false;
-};
-
-// Variabel untuk melacak apakah pergerakan pertama dan kedua telah terjadi
-let firstMove = true; // Geseran pertama
-let secondMove = false; // Geseran kedua
-
-// Fungsi untuk pindah ke item berikutnya (Next)
+// Next slide function
 const nextSlide = () => {
-    currentIndex++;
-    if (currentIndex + itemsPerPage > totalItems) {
-        currentIndex = 0; // Jika mencapai akhir, kembali ke awal
-    }
-    if (firstMove) {
-        secondMove = true; // Menandai pergerakan kedua setelah pertama
+    currentIndex += 1;
+    if (currentIndex >= totalItems) {
+        currentIndex = 0;
     }
     updateCarousel();
-};
+}
 
-// Fungsi untuk pindah ke item sebelumnya (Previous)
+// Previous slide function
 const prevSlide = () => {
-    currentIndex--;
+    currentIndex -= 1;
     if (currentIndex < 0) {
-        currentIndex = totalItems - itemsPerPage; // Jika sudah di awal, kembali ke akhir
-    }
-    if (firstMove) {
-        secondMove = true; // Menandai pergerakan kedua setelah pertama
+        currentIndex = totalItems - 1;
     }
     updateCarousel();
-};
+}
 
-// Event listeners untuk tombol prev dan next
+// Event listeners for buttons
 document.getElementById("nextButton").addEventListener("click", nextSlide);
 document.getElementById("prevButton").addEventListener("click", prevSlide);
-
-// Event listener untuk resize window agar jarak geser disesuaikan saat ukuran layar berubah
-window.addEventListener("resize", updateCarousel);
 
 
 
